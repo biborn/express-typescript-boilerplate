@@ -69,13 +69,13 @@ To configure app, use `.env` file in the root folder. Configuration will be load
 
 ### Deploy in Production
 
-First, create the production build of your application.
+First, create the production build of your application. You may use babel build or webpack bundle.
 
 ```bash
-# If you are using npm
+# If you would like to use Babel build
 npm run build
-# OR IF you are using Yarn
-yarn build
+# OR IF you are using Webpack bundle
+npm run bundle
 ```
 
 To use this app in production, you may use app like `pm2` to start this program. Install pm2 globally if you have not.
@@ -90,7 +90,9 @@ yarn global add pm2
 Make sure `pm2` has been installed by issuing `pm2` command. Terminal restart may be required after install. After `pm2` has been installed, start this program in `pm2` as cluster mode.
 
 ```bash
-DEBUG=my-project:* pm2 start build/app.js -i 0 --name "my-project"
+DEBUG=my-project:* pm2 start build/main.js -i 0 --name "my-project"
+# OR IF you are using webpack bundle
+DEBUG=my-project:* pm2 start dist/app.bundle.js -i 0 --name "my-project"
 ```
 
 ## Contribution
