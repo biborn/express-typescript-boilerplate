@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "outDir": "build",
+        "rootDir": "src",
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": false,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

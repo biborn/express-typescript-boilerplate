@@ -1,0 +1,37 @@
+# MacOS
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# modules
+node_modules
+
+# npm
+package-lock.json
+*.log
+*.gz
+
+# Yarn
+yarn-error.log
+
+# Coveralls
+coverage
+
+# Production
+dist
+build
+
+# Keys
+keys
+
+# Temporary 
+tmp

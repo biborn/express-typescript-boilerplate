@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "args": ["${workspaceFolder}/src/main.ts"],
+      "env": {
+        "DEBUG": "pknstan-sikipli-api-file:*",
+        "NODE_OPTIONS": "--inspect-brk=45805",
+        "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"commonjs\"}"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch and Watch",
+      "runtimeArgs": [
+        "--inspect-brk=45805"
+      ],
+      "program": "${workspaceFolder}/node_modules/nodemon/bin/nodemon.js",
+      "args": ["--inspect"],
+      "env": {
+        "DEBUG": "pknstan-sikipli-api-file:*",
+        "NODE_OPTIONS": "--debug-brk=45805",
+        "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"commonjs\"}"
+      },
+      "port": 45805
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach Inspector",
+      "port": 45805,
+      "restart": true,
+      "protocol": "auto"
+    }
+  ]
+}
